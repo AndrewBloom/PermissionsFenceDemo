@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.bloomengineering.permissionsfencedemo.ui.main.HomeFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_sub1Fragment"
+            app:destination="@id/sub1Fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_sub2Fragment"
+            app:destination="@id/sub2Fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_sub3Fragment"
+            app:destination="@id/sub3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sub1Fragment"
+        android:name="com.bloomengineering.permissionsfencedemo.ui.main.Sub1Fragment"
+        android:label="sub1_fragment"
+        tools:layout="@layout/sub1_fragment" >
+        <action
+            android:id="@+id/action_sub1Fragment_to_sub2Fragment"
+            app:destination="@id/sub2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sub2Fragment"
+        android:name="com.bloomengineering.permissionsfencedemo.ui.main.Sub2Fragment"
+        android:label="sub2_fragment"
+        tools:layout="@layout/sub2_fragment" >
+        <action
+            android:id="@+id/action_sub2Fragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sub3Fragment"
+        android:name="com.bloomengineering.permissionsfencedemo.ui.main.Sub3Fragment"
+        android:label="sub3_fragment"
+        tools:layout="@layout/sub3_fragment" >
+        <action
+            android:id="@+id/action_sub3Fragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
