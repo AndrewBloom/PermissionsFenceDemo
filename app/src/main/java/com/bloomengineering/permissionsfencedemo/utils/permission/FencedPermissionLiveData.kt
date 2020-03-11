@@ -42,7 +42,9 @@ private enum class PermissionEvent {
  * The user can be:
  * - Inside the area that requires the permission
  * - Outside the area that requires the permission
+ * The states are:
  * - On the verge of entering the area that requires permission
+ * - On the verge of exiting the area that requires permission
  */
 private class FencedNavigationStatus : LiveData<PermissionFencePositionEvent>()
 
